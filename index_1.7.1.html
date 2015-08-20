@@ -5,14 +5,39 @@
     <title>KUMA SPACE</title>
     <link rel="shortcut icon" href="./img/favicon.ico" />
     <link href="./css/common.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="./js/jquery-1.7.1.js"></script>
 	<meta name='keywords' content='' />
 	<meta name='description' content='' />
 
+<script type="text/javascript">
+	
+$(document).ready(function() {
+  var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+
+</script>
+
 </head>
 <body>
+<div id="wrap">
 
-ペペロンチーノ
+<header>スクロール追従ヘッダー</header>
+<div class="content">たこげっと</div>
 
+<p class="pagetop" style="display: block; opacity: 0.989611405310883;"><a href="#wrap">トップ</a></p>
+	
+</div>
 </body>
 
 </html>
